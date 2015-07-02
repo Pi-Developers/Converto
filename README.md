@@ -11,4 +11,15 @@ This is confusing, and makes you annoyed espically when writing a long post or s
 
 So, we created this simple app "CONVERTO"
 
+Features:
 
+- Convert arabic to english
+- Convert english to arabic
+
+Usage :
+
+- Just like excuting a python app, Google it :D
+- Wait for an excuteable windows ".exe" soon
+
+
+This app was intended to be a fun project.
