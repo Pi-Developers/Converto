@@ -23,4 +23,4 @@ So, we created this simple app "CONVERTO"
 
 
 **Note :**
-This app was intended to be a fun project.but we are updating tho.
+- This app was intended to be a fun project, but we are updating tho.
