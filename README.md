@@ -16,14 +16,22 @@ So, we created this simple app "CONVERTO"
 - Convert arabic to english
 - Convert english to arabic
 - Written in java
-- Written in pyathon
+- Written in python
+
+**To-Do list :**
+- Add python GUI
+- Add java GUI
+- upload Vb.net version (For MS Windows)
 
 **Usage :**
 
-- Just like excuting a python app, Google it :D
-- Wait for an excuteable windows ".exe" soon
+For Python
+- in terminal type python Converto.py
+
+For java
 - make sure you have installed java in your terminal type javac Converto.java 
 - then type Converto
 
 **Note :**
-- This app was intended to be a fun project, but we are updating tho.
+- This app was intended to be a fun -yet useful - project, but we are updating tho.
+- feel free to add your language to this app and make lifes easier.
