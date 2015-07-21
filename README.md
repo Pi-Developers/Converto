@@ -25,15 +25,15 @@ So, we created this simple app "CONVERTO"
 
 **Usage :**
 
-->For Python
-- in terminal type python Converto.py
+- For Python
+-> in terminal type python Converto.py
 
-->For java
-- make sure you have installed java in your terminal type javac Converto.java 
-- then type Converto
+- For java
+-> make sure you have installed java in your terminal type javac Converto.java 
+-> then type Converto
 
-->For EXE
-- just click on it :D
+- For EXE
+-> just click on it :D
 
 
 **Note :**
