@@ -7,6 +7,7 @@
 
 import sys  
 import Tkinter
+import subprocess
 import tkMessageBox
 from Tkinter import *
 
@@ -62,9 +63,10 @@ Totally worth it!
 \n-Multi Lingual : coded in python, java and vb.net to provide many solutions for users with one of them not installed
 \n-Easy to use : no installation or anything, use out-of-box
 \n-Open source : everyone can contribute to development
-\n\nHave fun using our app, Feedback is welcomed""")
+\n\nHave fun using our app, Feedback is welcomed..""")
 
 #####################
+
 b0 = Button(root, text="About Converto", command=show2)
 b0.pack(side=BOTTOM,fill=X ,expand="yes",padx=5,pady=5)
 b00 = Button(root, text="About Pi Developers", command=show1)
@@ -132,13 +134,21 @@ def cone():
         x32 = x31.replace("ز" , ".")
         x33 = x32.replace("ظ" , "/")
         x34 = x33.replace("ذ" , "`")
+        global x35
         x35 = x34.replace("ﻻ" , "b")
 
         e.delete(0 , 'end')
         e.insert(0 , x35)
 
+
 #####################
 
+def copy():
+
+        root.clipboard_clear()
+        root.clipboard_append(x35)
+
+####################
 def cona():
 
         x0 = f.get()
@@ -176,15 +186,20 @@ def cona():
         x31 = x30.replace("m" , "و" )
         x32 = x31.replace("." ,"ز" )
         x33 = x32.replace("/" , "ظ" )
+        global x34
         x34 = x33.replace("`" , "ذ")
 
         f.delete(0 , 'end')
         f.insert(0 , x34)
-
-
+     
 #####################
 
+def copy1():
 
+        root.clipboard_clear()
+        root.clipboard_append(x34)
+
+#####################
 
 b1 = Button(labelframe1, text="Convert",command=cone)
 b2 = Button(labelframe, text="Convert",command=cona)
@@ -193,8 +208,8 @@ b2.pack(side=LEFT,fill=X, expand="yes",padx=3)
 
 #####################
 
-b3 = Button(labelframe1, text="Copy")
-b4 = Button(labelframe, text="Copy")
+b3 = Button(labelframe1, text="Copy",command=copy)
+b4 = Button(labelframe, text="Copy",command=copy1)
 b3.pack(side=LEFT,fill=X ,expand="yes",padx=3)
 b4.pack(side=LEFT,fill=X, expand="yes",padx=3)
 
