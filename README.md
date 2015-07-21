@@ -15,12 +15,15 @@ So, we created this simple app "CONVERTO"
 
 - Convert arabic to english
 - Convert english to arabic
+- Written in java
+- Written in pyathon
 
 **Usage :**
 
 - Just like excuting a python app, Google it :D
 - Wait for an excuteable windows ".exe" soon
-
+- make sure you have installed java in your terminal type javac Converto.java 
+- then type Converto
 
 **Note :**
 - This app was intended to be a fun project, but we are updating tho.
