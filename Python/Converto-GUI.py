@@ -7,12 +7,16 @@
 
 import sys  
 import Tkinter
+import tkMessageBox
 from Tkinter import *
 
 
 
 reload(sys)  
 sys.setdefaultencoding('utf8')
+
+
+#####################
 
 root = Tkinter.Tk()
 root.resizable(width=FALSE, height=FALSE)
@@ -21,26 +25,66 @@ root.wm_title("Converto - The Ultimate Text Fixer (Linux/Unix Edition)")
 
 #####################
 
-b0 = Button(root, text="About Converto")
-b0.pack(side=BOTTOM,fill=X ,expand="yes",padx=5,pady=5)
-b0 = Button(root, text="About Pi Developers")
-b0.pack(side=BOTTOM,fill=X ,expand="yes",padx=5,pady=3)
+def show1():
+        Dialog1 = Toplevel(height=100, width=100) #Here
+        tkMessageBox.showinfo( "About Pi Developers" , """- Who are we ?
+\nA tech startup.we are Egyptians, a group of teenagers with vision and mind. we want to make computer (PC, mobile..etc) users usage better and easier by offering new solutions.
+\n\n
+- What is our goal ?
+\nTo reach the greatest potential with your device and make you -the user- satisfied.
+by using our solutions, your life will be better.
+User comes first, all this work is for you, and every person is potentially a user, so you all matter to us.We work for you.
+\n\n
+- Our philosophy ?
+\nWe were born to innovate , not to copy others. We follow this slogan as it is the bible, since our launch we have been creating ideas, or refining others, we will not settle for normal when we can reach for the stars.
 
-#########################
+\n\nif you like our humble work, just share it, that's better than money :D
+\n\n\n_____________________________________
+\nVisit us here:
+\nhttps://www.facebook.com/PiDevs
+\nhttps://twitter.com/pi_developers
+\nhttp://www.pi-developers.com
+\nhttp://pidevelopers.blogspot.com""")
+
+#####################
+
+def show2():
+
+        tkMessageBox.showinfo( "About Converto", """
+Converto
+\nThe app that will make your keyboard experience better, no need to worry about forgetting to switch your keyboard language before typing anymore...
+\n\n
+Reason to create this?
+\nTechnology was made to make you feel comforted, this will help you and save your "Damn ,I forgot to change keyboard language"
+Totally worth it!
+\n\nThis app is :
+\n-Cross Platform : no matter what your PC runs, you can use Converto
+\n-Multi Lingual : coded in python, java and vb.net to provide many solutions for users with one of them not installed
+\n-Easy to use : no installation or anything, use out-of-box
+\n-Open source : everyone can contribute to development
+\n\nHave fun using our app, Feedback is welcomed""")
+
+#####################
+b0 = Button(root, text="About Converto", command=show2)
+b0.pack(side=BOTTOM,fill=X ,expand="yes",padx=5,pady=5)
+b00 = Button(root, text="About Pi Developers", command=show1)
+b00.pack(side=BOTTOM,fill=X ,expand="yes",padx=5,pady=3)
+
+#####################
 
 labelframe = LabelFrame(root, text="English to Arabic")
 labelframe.pack(fill="both", expand="yes",side=LEFT ,padx=10 ,pady=0)
 labelframe1 = LabelFrame(root, text="Arabic to English")
 labelframe1.pack(fill="both", expand="yes",side=LEFT ,padx=10 ,pady=0)
 
-#############################
+#####################
 
 right = Label(labelframe, text="Write/Paste English text here :")
 right.pack(padx=4 ,pady=4)
 left = Label(labelframe1, text="Write/Paste Arabic text here :")
 left.pack(padx=4 ,pady=4)
  
-#############################
+#####################
 
 e = Entry(labelframe1 ,textvariable="hey")
 e.pack(padx=2 ,pady =1,fill=X)
@@ -48,7 +92,7 @@ e.pack(padx=2 ,pady =1,fill=X)
 f = Entry(labelframe ,text="fbfb",textvariable="you")
 f.pack(padx=2,pady =1,fill=X)
 
-#########################################
+#####################
 
 def cone():
 
@@ -93,8 +137,7 @@ def cone():
         e.delete(0 , 'end')
         e.insert(0 , x35)
 
-
-##############################
+#####################
 
 def cona():
 
@@ -125,9 +168,9 @@ def cona():
         x23 = x22.replace(";" ,"ك"  )
         x24 = x23.replace("'" , "ط")
         x25 = x24.replace("z" , "ئ")
-        x26 = x25.replace("x" ,"ء"  )
+        x26 = x25.replace("x" ,"ء")
         x27 = x26.replace("c" ,"ؤ")
-        x28 = x27.replace("v" , "ر"  )
+        x28 = x27.replace("v" , "ر")
         x29 = x28.replace( "n" ,"ى")
         x30 = x29.replace("m" ,"ة" )
         x31 = x30.replace("m" , "و" )
@@ -139,7 +182,9 @@ def cona():
         f.insert(0 , x34)
 
 
-##############################
+#####################
+
+
 
 b1 = Button(labelframe1, text="Convert",command=cone)
 b2 = Button(labelframe, text="Convert",command=cona)
