@@ -17,6 +17,7 @@ So, we created this simple app "CONVERTO"
 - Convert english to arabic
 - Written in java
 - Written in python
+- Directly fix text (Windows only)
 
 **To-Do list :**
 - Add python GUI
@@ -36,6 +37,8 @@ So, we created this simple app "CONVERTO"
 -> just click on it :D
 
 
-**Note :**
+**Notes :**
+
 - This app was intended to be a fun -yet useful - project, but we are updating tho.
 - feel free to add your language to this app and make lifes easier.
+- The linux/unix versions has no hotkey yet (will be added soon)
