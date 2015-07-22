@@ -1,20 +1,21 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/python
-
+#
 #author @mohamed rashad
+#
 while True:
 
     print "\n\n   ~~~~~~~~~~~~~~~~~~Welcome to Converto Script~~~~~~~~~~~~~~~~~~~"
 
     print "\n Would you like to fix..?\n\t1-Arabic to English\n\t2-English to Arabic"
 
-    print "\n Choose your Option:"
+    print "\n Choose your Option :"
 
     Input = raw_input(">")
 
     if Input == "1":
     
-        print "\n Enter your arabic mistyped text:"
+        print "\n Enter your arabic mistyped text in lower case to prevent error:"
         input2 = raw_input("> ")
 
         print "\n\n Proccessing.."
@@ -61,7 +62,7 @@ while True:
     
     elif Input == "2":    
 
-        print "Enter your english mistyped text:"
+        print "Enter your english mistyped text in lower case to prevent error:"
         input2 = raw_input(">")
 
         print "\n\n Proccessing.."
