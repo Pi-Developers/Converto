@@ -29,7 +29,7 @@ root.wm_title("Converto - The Ultimate Text Fixer (Linux/Unix Edition)")
 def show1():
         Dialog1 = Toplevel(height=100, width=100) #Here
         tkMessageBox.showinfo( "About Pi Developers" , """- Who are we ?
-\nA tech startup.we are Egyptians, a group of teenagers with vision and mind. we want to make computer (PC, mobile..etc) users usage better and easier by offering new solutions.
+\nA tech startup.we are Egyptians and Indian, a group of teenagers with vision and mind. we want to make computer (PC, mobile..etc) users usage better and easier by offering new solutions.
 \n\n
 - What is our goal ?
 \nTo reach the greatest potential with your device and make you -the user- satisfied.
