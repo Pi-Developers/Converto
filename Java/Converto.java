@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+
+/**
+ * @author Sahid S Almas
+ */
+ 
 public class Converto {
     private static Scanner mScanner;
     private static int SELECTED_ON_ENG_TO_ARA = 1;
@@ -11,8 +16,8 @@ public class Converto {
         mScanner = new Scanner(System.in);
         sys("Welcome to Converto by PI-Developers \n");
         sys("Please select any one of this \n");
-        sys("1) Do you want to change english text to arabic \n");
-        sys("2) Do you want to change arabic text to english \n");
+        sys("1) Would you like to change your mistyped text from english to arabic \n");
+        sys("1) Would you like to change your mistyped text from arabic to english \n");
         sys("3) About Pi Developers \n");
         sys("Enter value : ");
         do {
