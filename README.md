@@ -40,6 +40,6 @@ So, we created this simple app "CONVERTO"
 
 **Notes :**
 
-- This app was intended to be a fun -yet useful - project, but we are updating tho.
+- This app was intended to be a fun - yet useful - project, but we are updating tho.
 - feel free to add your language to this app and make lifes easier.
 - The linux/unix versions has no hotkey yet (will be added soon)
