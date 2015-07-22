@@ -23,7 +23,7 @@ So, we created this simple app "CONVERTO"
 **To-Do list :**
 
 - Add java GUI
-
+- Add hotkey fix to linux/unix
 
 **Usage :**
 
