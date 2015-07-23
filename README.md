@@ -22,7 +22,6 @@ So, we created this simple app "CONVERTO"
 
 **To-Do list :**
 
-- Add java GUI
 - Add hotkey fix to linux/unix
 
 **Usage :**
@@ -32,7 +31,7 @@ So, we created this simple app "CONVERTO"
 
 - For java
 -> make sure you have installed java in your terminal type javac Converto.java 
--> then type Converto
+-> then type java Converto
 
 - For EXE
 -> just click on it :D
