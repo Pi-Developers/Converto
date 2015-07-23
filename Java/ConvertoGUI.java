@@ -9,19 +9,52 @@ import java.awt.event.ActionListener;
 public class ConvertoGUI {
     public static  String INPUT = null;
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Converto");
+        final JFrame frame = new JFrame("Converto");
+        MenuBar jMenuBar = new MenuBar();
+        Menu con = new Menu("Converto");
+        con.getAccessibleContext().setAccessibleDescription(
+                "The only menu in this program that has menu items");
+        jMenuBar.add(con);
+        MenuItem about = new MenuItem("About");
+        about.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                JOptionPane.showMessageDialog(frame,"Who are we ? \n" +
+                        "A tech startup.we are Egyptians and Indian, a group of teenagers \n" +
+                        " with vision and mind. we want to make computer (PC, mobile..etc) \n" +
+                        "users usage better and easier by offering new solutions" +
+                        "\n \n"+
+                " What is our goal ?"+
+                "\n To reach the greatest potential with your device and make you -the user- \n satisfied.\n" +
+                        "by using our solutions, your life will be better." +
+                        "\n User comes first, all this work is for you, and every person is \n" +
+                        " potentially a user, so you all matter to us.We work for you." +
+                        "\n \n"+
+                        "Our philosophy ?"+
+                "We were born to innovate , not to copy others. \n We follow this slogan as it is \n " +
+                        "the bible, since our launch we have been creating ideas, or refining \n " +
+                        "others, we will not settle for normal when we can reach for the stars"+
+                "\n\\nif you like our humble work, just share it, that's better than money :D\n" +
+                        "\n\n\n_____________________________________\n" +
+                        "\nVisit us here:\n" +
+                        "\nhttps://www.facebook.com/PiDevs\n" +
+                        "\nhttps://twitter.com/pi_developers\n" +
+                        "\nhttp://www.pi-developers.com\n" +
+                        "\nhttp://pidevelopers.blogspot.com\"");
+            }
+        });
+        con.add(about);
+        frame.setMenuBar(jMenuBar);
 
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
 
-        JLabel label = new JLabel("Please Enter your Mistyped text");
-
         final JEditorPane helpPane=new JEditorPane("text",null);
         helpPane.setEditable(true);
-        helpPane.setPreferredSize(new Dimension(400,100));
+        helpPane.setPreferredSize(new Dimension(400, 100));
         helpPane.setText("Please Enter Your text here to fix your mistyped text");
 
-        final JScrollPane helpPanelScrollPane=new JScrollPane(helpPane);
+        final JScrollPane helpPanelScrollPane = new JScrollPane(helpPane);
 
         panel.add(helpPanelScrollPane);
 
@@ -33,8 +66,8 @@ public class ConvertoGUI {
         group.add(option2);
         panel.add(option1);
         panel.add(option2);
-            JButton tra = new JButton("Change It");
-
+        JButton tra = new JButton("Change It");
+        helpPane.getText().toLowerCase();
         JButton copy = new JButton("Copy");
         copy.addActionListener(new ActionListener() {
             @Override
@@ -56,11 +89,11 @@ public class ConvertoGUI {
         tra.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                INPUT = helpPane.getText().toString();
+                INPUT = helpPane.getText();
                 String a = INPUT.toLowerCase();
                 if (option1.isSelected()) {
                     String x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16, x17, x18, x19, x20,
-                            x21, x22, x23, x24, x25, x26, x27, x28, x29, x30, x31, x32, x33, x34, x35;
+                            x21, x22, x23, x24, x25, x26, x27, x28, x29, x30, x31, x32, x33, x34;
                     x1 = a.replace("q", "ض");
                     x2 = x1.replace("w", "ص");
                     x3 = x2.replace("e", "ث");
@@ -78,9 +111,9 @@ public class ConvertoGUI {
                     x15 = x14.replace("d", "ي");
                     x16 = x15.replace("f", "ب");
                     x17 = x16.replace("g", "ل");
-                    ;
+
                     x18 = x17.replace("h", "ا");
-                    ;
+
                     x19 = x18.replace("h", "أ");
                     x20 = x19.replace("j", "ت");
                     x21 = x20.replace("k", "ن");
@@ -109,14 +142,14 @@ public class ConvertoGUI {
                     x5 = x4.replace("ف", "t");
                     x6 = x5.replace("غ", "y");
                     x7 = x6.replace("ع", "u");
-                    ;
+
                     x8 = x7.replace("ه", "i");
-                    ;
+
                     x9 = x8.replace("خ", "o");
-                    ;
+
                     x10 = x9.replace("ح", "p");
                     x11 = x10.replace("ج", "[");
-                    ;
+
                     x12 = x11.replace("د", "]");
                     x13 = x12.replace("ش", "a");
                     x14 = x13.replace("س", "s");
