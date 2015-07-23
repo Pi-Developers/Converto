@@ -11,7 +11,7 @@ public class ConvertoGUI {
     public static void main(String[] args) {
         final JFrame frame = new JFrame("Converto");
         MenuBar jMenuBar = new MenuBar();
-        Menu con = new Menu("Converto");
+        Menu con = new Menu("Options");
         con.getAccessibleContext().setAccessibleDescription(
                 "The only menu in this program that has menu items");
         jMenuBar.add(con);
