@@ -9,6 +9,7 @@ import sys
 import Tkinter
 import subprocess
 import tkMessageBox
+
 from Tkinter import *
 
 
@@ -21,20 +22,20 @@ sys.setdefaultencoding('utf8')
 
 root = Tkinter.Tk()
 root.resizable(width=FALSE, height=FALSE)
-root.geometry('{}x{}'.format(600, 170))
+root.geometry('{}x{}'.format(600, 180))
 root.wm_title("Converto - The Ultimate Text Fixer (Linux/Unix Edition)")
+
 
 #####################
 
-def show1():
-        Dialog1 = Toplevel(height=100, width=100) #Here
-        tkMessageBox.showinfo( "About Pi Developers" , """- Who are we ?
-\nA tech startup.we are Egyptians and Indian, a group of teenagers with vision and mind. we want to make computer (PC, mobile..etc) users usage better and easier by offering new solutions.
+
+about_pi = """- Who are we ?
+\nA tech startup.Wwe are Egyptians, a group of teenagers with vision and mind. we want to make computer (PC, mobile..etc) users usage better and easier by offering new solutions.
 \n\n
-- What is our goal ?
+- our goal ?
 \nTo reach the greatest potential with your device and make you -the user- satisfied.
-by using our solutions, your life will be better.
-User comes first, all this work is for you, and every person is potentially a user, so you all matter to us.We work for you.
+\nby using our solutions, your life will be better.
+\nUser comes first, all this work is for you, and every person is potentially a user, so you all matter to us.We work for you.
 \n\n
 - Our philosophy ?
 \nWe were born to innovate , not to copy others. We follow this slogan as it is the bible, since our launch we have been creating ideas, or refining others, we will not settle for normal when we can reach for the stars.
@@ -45,14 +46,11 @@ User comes first, all this work is for you, and every person is potentially a us
 \nhttps://www.facebook.com/PiDevs
 \nhttps://twitter.com/pi_developers
 \nhttp://www.pi-developers.com
-\nhttp://pidevelopers.blogspot.com""")
+\nhttp://pidevelopers.blogspot.com"""
 
-#####################
 
-def show2():
 
-        tkMessageBox.showinfo( "About Converto", """
-Converto
+about_app = """Converto
 \nThe app that will make your keyboard experience better, no need to worry about forgetting to switch your keyboard language before typing anymore...
 \n\n
 Reason to create this?
@@ -63,21 +61,36 @@ Totally worth it!
 \n-Multi Lingual : coded in python, java and vb.net to provide many solutions for users with one of them not installed
 \n-Easy to use : no installation or anything, use out-of-box
 \n-Open source : everyone can contribute to development
-\n\nHave fun using our app, Feedback is welcomed..""")
+\n\nHave fun using our app, Feedback is welcomed..""" 
+
+
+
+#####################
+
+
+def show1():
+    
+        tkMessageBox.showinfo( "About Pi Developers" , about_pi )
+
+#####################
+
+def show2():
+
+        tkMessageBox.showinfo( "About Converto", about_app)
 
 #####################
 
 b0 = Button(root, text="About Converto", command=show2)
-b0.pack(side=BOTTOM,fill=X ,expand="yes",padx=5,pady=5)
+b0.pack(side=BOTTOM,fill=X ,expand="yes",padx=5,pady=0)
 b00 = Button(root, text="About Pi Developers", command=show1)
 b00.pack(side=BOTTOM,fill=X ,expand="yes",padx=5,pady=3)
 
 #####################
 
 labelframe = LabelFrame(root, text="English to Arabic")
-labelframe.pack(fill="both", expand="yes",side=LEFT ,padx=10 ,pady=0)
+labelframe.pack(fill="both", expand="yes",side=LEFT ,padx=10 ,pady=3)
 labelframe1 = LabelFrame(root, text="Arabic to English")
-labelframe1.pack(fill="both", expand="yes",side=LEFT ,padx=10 ,pady=0)
+labelframe1.pack(fill="both", expand="yes",side=LEFT ,padx=10 ,pady=3)
 
 #####################
 
@@ -89,10 +102,24 @@ left.pack(padx=4 ,pady=4)
 #####################
 
 e = Entry(labelframe1 ,textvariable="hey")
-e.pack(padx=2 ,pady =1,fill=X)
+e.pack(padx=3 ,pady =1,fill=X)
 
 f = Entry(labelframe ,text="fbfb",textvariable="you")
-f.pack(padx=2,pady =1,fill=X)
+f.pack(padx=3,pady =1,fill=X)
+
+#####################
+
+
+def pastea():
+
+        f.insert(0, root.clipboard_get())
+
+
+#####################
+def pastee():
+
+        e.insert(0, root.clipboard_get())
+
 
 #####################
 
@@ -203,16 +230,23 @@ def copy1():
 
 b1 = Button(labelframe1, text="Convert",command=cone)
 b2 = Button(labelframe, text="Convert",command=cona)
-b1.pack(side=LEFT,fill=X ,expand="yes",padx=3)
-b2.pack(side=LEFT,fill=X, expand="yes",padx=3)
+b1.pack(side=LEFT,fill=X ,expand="yes",padx=3 , pady=3)
+b2.pack(side=LEFT,fill=X, expand="yes",padx=3, pady=3)
 
 #####################
 
 b3 = Button(labelframe1, text="Copy",command=copy)
 b4 = Button(labelframe, text="Copy",command=copy1)
-b3.pack(side=LEFT,fill=X ,expand="yes",padx=3)
-b4.pack(side=LEFT,fill=X, expand="yes",padx=3)
+b3.pack(side=LEFT,fill=X ,expand="yes",padx=3, pady=3)
+b4.pack(side=LEFT,fill=X, expand="yes",padx=3, pady=3)
 
-############################
+#####################
+
+b5 = Button(labelframe1, text="Paste", command=pastee)
+b6 = Button(labelframe, text="Paste", command=pastea)
+b5.pack(side=LEFT,fill=X ,expand="yes",padx=3, pady=3)
+b6.pack(side=LEFT,fill=X, expand="yes",padx=3, pady=3)
+
+#####################
 
 root.mainloop()
