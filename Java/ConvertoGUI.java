@@ -19,22 +19,25 @@ public class ConvertoGUI {
         about.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                JOptionPane.showMessageDialog(frame,"Who are we ? \n" +
+                JOptionPane.showMessageDialog(frame, "Who are we ? \n" +
                         "A tech startup.we are Egyptians and Indian, a group of teenagers \n" +
                         " with vision and mind. we want to make computer (PC, mobile..etc) \n" +
                         "users usage better and easier by offering new solutions" +
-                        "\n \n"+
-                " What is our goal ?"+
-                "\n To reach the greatest potential with your device and make you -the user- \n satisfied.\n" +
+                        "\n \n" +
+                        " What is our goal ?" +
+                        "\n To reach the greatest potential with your device and make you -the user- \n satisfied.\n" +
                         "by using our solutions, your life will be better." +
                         "\n User comes first, all this work is for you, and every person is \n" +
                         " potentially a user, so you all matter to us.We work for you." +
-                        "\n \n"+
-                        "Our philosophy ?"+
-                "We were born to innovate , not to copy others. \n We follow this slogan as it is \n " +
+
+                        "Our philosophy ? \n" +
+                        "We were born to innovate , not to copy others. \n We follow this slogan as it is \n " +
                         "the bible, since our launch we have been creating ideas, or refining \n " +
-                        "others, we will not settle for normal when we can reach for the stars"+
-                "\n\\nif you like our humble work, just share it, that's better than money :D\n" +
+                        "others, we will not settle for normal when we can reach for the stars \n" +
+                        "\n if you like our humble work, just share it, that's better than money :D\n" +
+                        "\n \n" +
+                        "Credits " +
+                        "\n Sahid S Almas \n Mohamed Rashad \n Mohamed El-Sayed \n" +
                         "\n\n\n_____________________________________\n" +
                         "\nVisit us here:\n" +
                         "\nhttps://www.facebook.com/PiDevs\n" +
@@ -45,13 +48,16 @@ public class ConvertoGUI {
         });
         con.add(about);
         frame.setMenuBar(jMenuBar);
-
+        frame.setMaximizedBounds(new Rectangle(498, 248));
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
+        frame.setIconImage(new ImageIcon("pi.png").getImage());
+        panel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+        frame.setBackground(Color.darkGray);
 
         final JEditorPane helpPane=new JEditorPane("text",null);
         helpPane.setEditable(true);
-        helpPane.setPreferredSize(new Dimension(400, 100));
+        helpPane.setPreferredSize(new Dimension(420, 100));
         helpPane.setText("Please Enter Your text here to fix your mistyped text");
 
         final JScrollPane helpPanelScrollPane = new JScrollPane(helpPane);
@@ -64,9 +70,9 @@ public class ConvertoGUI {
         ButtonGroup group = new ButtonGroup();
         group.add(option1);
         group.add(option2);
-        panel.add(option1);
-        panel.add(option2);
-        JButton tra = new JButton("Change It");
+        panel.add(option1, BorderLayout.CENTER);
+        panel.add(option2, BorderLayout.CENTER);
+        JButton tra = new JButton("Change it");
         helpPane.getText().toLowerCase();
         JButton copy = new JButton("Copy");
         copy.addActionListener(new ActionListener() {
@@ -85,10 +91,12 @@ public class ConvertoGUI {
             }
         });
         panel.add(paste);
+
         panel.add(tra);
         tra.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+
                 INPUT = helpPane.getText();
                 String a = INPUT.toLowerCase();
                 if (option1.isSelected()) {
@@ -178,8 +186,6 @@ public class ConvertoGUI {
                 }
             }
         });
-
-
         frame.add(panel);
         frame.setSize(500, 250);
 
