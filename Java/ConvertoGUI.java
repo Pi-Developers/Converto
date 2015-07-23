@@ -51,7 +51,7 @@ public class ConvertoGUI {
         frame.setMaximizedBounds(new Rectangle(498, 248));
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
-        frame.setIconImage(new ImageIcon("pi.png").getImage());
+        frame.setIconImage(new ImageIcon("pi_icon.png").getImage());
         panel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
         frame.setBackground(Color.darkGray);
 
