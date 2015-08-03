@@ -37,6 +37,12 @@ So, we created this simple app "CONVERTO"
 -> just click on it :D
 
 
+**Chgangelog :**
+>>V1.0 :
+
+>> - Initial release
+
+
 **Notes :**
 
 - This app was intended to be a fun - yet useful - project, but we are updating tho.
