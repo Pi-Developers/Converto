@@ -4,7 +4,7 @@ An app for confused arabic users
 If you are not using arabic/english at the same time this is not for you.
 
 
-**Current version : 1.0** 
+**Current version : 1.1** 
 
 **Intro :**
 
@@ -45,6 +45,10 @@ So, we created this simple app "CONVERTO"
 
 >> - Initial release
 
+>>V1.1 :
+
+>> - Converted to GTK
+>> - Cleaner layout
 
 **Notes :**
 
