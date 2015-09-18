@@ -3,108 +3,119 @@
 #
 #author @mohamed rashad
 #
-while True:
+import readline 
 
-    print "\n\n   ~~~~~~~~~~~~~~~~~~Welcome to Converto Script~~~~~~~~~~~~~~~~~~~"
+EnglishPattle = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPRSTUVWXYZ[]'/;.,"
+ArabicPattle = "شﻻؤيثبلاهتنمةىخحضقسفعرضءغئ"
 
-    print "\n Would you like to fix..?\n\t1-Arabic to English\n\t2-English to Arabic"
+class Converto:
 
-    print "\n Choose your Option :"
+    def showIntro(self):
 
-    Input = raw_input(">")
+        print "\n\n   ~~~~~~~~~~~~~~~~~~Welcome to Converto Script~~~~~~~~~~~~~~~~~~~\nExit code: ^D\n"
 
-    if Input == "1":
-    
-        print "\n Enter your arabic mistyped text in lower case to prevent error:"
-        input2 = raw_input("> ")
+    def convert(self,phrase):
+        try:
+            phrase[0]
+        except IndexError:
+            return ""
+      
+        if phrase[0] in EnglishPattle:
 
-        print "\n\n Proccessing.."
-        x1 = input2.replace("ض" , "q")
-        x2 = x1.replace("ص" , "w")
-        x3 = x2.replace("ث" , "e")
-        x4 = x3.replace("ق" , "r")
-        x5 = x4.replace("ف" , "t")
-        x6 = x5.replace("غ" , "y")
-        x7 = x6.replace("ع" , "u")
-        x8 = x7.replace("ه" , "i")
-        x9 = x8.replace("خ" , "o")
-        x10 = x9.replace("ح" , "p")
-        x11 = x10.replace("ج" , "[")
-        x12 = x11.replace("د" , "]")
-        x13 = x12.replace("ش" , "a")
-        x14 = x13.replace("س" , "s")
-        x15 = x14.replace("ي" , "d")
-        x16 = x15.replace("ب" , "f")
-        x17 = x16.replace("ل" , "g")
-        x18 = x17.replace("ا" , "h")
-        x19 = x18.replace("أ" , "h")
-        x20 = x19.replace("ت" , "j")
-        x21 = x20.replace("ن" , "k")
-        x22 = x21.replace("م" , "l")
-        x23 = x22.replace("ك" , ";")
-        x24 = x23.replace("ط" , "'")
-        x25 = x24.replace("ئ" , "z")
-        x26 = x25.replace("ء" , "x")
-        x27 = x26.replace("ؤ" , "c")
-        x28 = x27.replace("ر" , "v")
-        x29 = x28.replace("ى" , "n")
-        x30 = x29.replace("ة" , "m")
-        x31 = x30.replace("و" , ",")
-        x32 = x31.replace("ز" , ".")
-        x33 = x32.replace("ظ" , "/")
-        x34 = x33.replace("ذ" , "`")
-        x35 = x34.replace("ﻻ" , "b")
-
-        print "\n\n Your Text : " ,
-        print x35
-
-
-    
-    elif Input == "2":    
-
-        print "Enter your english mistyped text in lower case to prevent error:"
-        input2 = raw_input(">")
-
-        print "\n\n Proccessing.."
-        x1 = input2.replace("q","ض")
-        x2 = x1.replace("w" , "ص")
-        x3 = x2.replace("e" , "ث")
-        x4 = x3.replace("r", "ق" )
-        x5 = x4.replace( "t" , "ف")
-        x6 = x5.replace("y" , "غ")
-        x7 = x6.replace("u" , "ع")
-        x8 = x7.replace( "i" , "ه")
-        x9 = x8.replace("o" , "خ")
-        x10 = x9.replace("p" , "ح")
-        x11 = x10.replace( "[" ,"ج" )
-        x12 = x11.replace("]" ,"د"  )
-        x13 = x12.replace("a" ,"ش"  )
-        x14 = x13.replace( "s" , "س")
-        x15 = x14.replace("d" , "ي"  )
-        x16 = x15.replace("f" , "ب"  )
-        x17 = x16.replace("g" ,"ل")
-        x18 = x17.replace("h" , "ا" )
-        x19 = x18.replace( "h" ,"أ" )
-        x20 = x19.replace("j" ,"ت" )
-        x21 = x20.replace("k" ,"ن"  )
-        x22 = x21.replace("l" ,"م"  )
-        x23 = x22.replace(";" ,"ك"  )
-        x24 = x23.replace("'" , "ط")
-        x25 = x24.replace("z" , "ئ")
-        x26 = x25.replace("x" ,"ء"  )
-        x27 = x26.replace("c" ,"ؤ")
-        x28 = x27.replace("v" , "ر"  )
-        x29 = x28.replace( "n" ,"ى")
-        x30 = x29.replace("m" ,"ة" )
-        x31 = x30.replace("m" , "و" )
-        x32 = x31.replace("." ,"ز" )
-        x33 = x32.replace("/" , "ظ" )
-        x34 = x33.replace("`" , "ذ")
-
-        print "\n\n Your Text : " ,
-        print x34
+            phrase=phrase.replace("q","ض")
+            phrase=phrase.replace("w" , "ص")
+            phrase=phrase.replace("e" , "ث")
+            phrase=phrase.replace("r", "ق" )
+            phrase=phrase.replace( "t" , "ف")
+            phrase=phrase.replace("y" , "غ")
+            phrase=phrase.replace("u" , "ع")
+            phrase=phrase.replace( "i" , "ه")
+            phrase=phrase.replace("o" , "خ")
+            phrase=phrase.replace("p" , "ح")
+            phrase=phrase.replace( "[" ,"ج" )
+            phrase=phrase.replace("]" ,"د"  )
+            phrase=phrase.replace("a" ,"ش"  )
+            phrase=phrase.replace( "s" , "س")
+            phrase=phrase.replace("d" , "ي"  )
+            phrase=phrase.replace("f" , "ب"  )
+            phrase=phrase.replace("g" ,"ل")
+            phrase=phrase.replace("h" , "ا" )
+            phrase=phrase.replace( "h" ,"أ" )
+            phrase=phrase.replace("j" ,"ت" )
+            phrase=phrase.replace("k" ,"ن"  )
+            phrase=phrase.replace("l" ,"م"  )
+            phrase=phrase.replace(";" ,"ك"  )
+            phrase=phrase.replace("'" , "ط")
+            phrase=phrase.replace("z" , "ئ")
+            phrase=phrase.replace("x" ,"ء"  )
+            phrase=phrase.replace("c" ,"ؤ")
+            phrase=phrase.replace("v" , "ر"  )
+            phrase=phrase.replace( "n" ,"ى")
+            phrase=phrase.replace("m" ,"ة" )
+            phrase=phrase.replace("m" , "و" )
+            phrase=phrase.replace("." ,"ز" )
+            phrase=phrase.replace("/" , "ظ" )
+            phrase=phrase.replace("`" , "ذ")
+            return phrase
 
 
+        if phrase[0] in ArabicPattle:
+
+            phrase=phrase.replace("ض" , "q")
+            phrase=phrase.replace("ص" , "w")
+            phrase=phrase.replace("ث" , "e")
+            phrase=phrase.replace("ق" , "r")
+            phrase=phrase.replace("ف" , "t")
+            phrase=phrase.replace("غ" , "y")
+            phrase=phrase.replace("ع" , "u")
+            phrase=phrase.replace("ه" , "i")
+            phrase=phrase.replace("خ" , "o")
+            phrase=phrase.replace("ح" , "p")
+            phrase=phrase.replace("ج" , "[")
+            phrase=phrase.replace("د" , "]")
+            phrase=phrase.replace("ش" , "a")
+            phrase=phrase.replace("س" , "s")
+            phrase=phrase.replace("ي" , "d")
+            phrase=phrase.replace("ب" , "f")
+            phrase=phrase.replace("ل" , "g")
+            phrase=phrase.replace("ا" , "h")
+            phrase=phrase.replace("أ" , "h")
+            phrase=phrase.replace("ت" , "j")
+            phrase=phrase.replace("ن" , "k")
+            phrase=phrase.replace("م" , "l")
+            phrase=phrase.replace("ك" , ";")
+            phrase=phrase.replace("ط" , "'")
+            phrase=phrase.replace("ئ" , "z")
+            phrase=phrase.replace("ء" , "x")
+            phrase=phrase.replace("ؤ" , "c")
+            phrase=phrase.replace("ر" , "v")
+            phrase=phrase.replace("ى" , "n")
+            phrase=phrase.replace("ة" , "m")
+            phrase=phrase.replace("و" , ",")
+            phrase=phrase.replace("ز" , ".")
+            phrase=phrase.replace("ظ" , "/")
+            phrase=phrase.replace("ذ" , "`")
+            phrase=phrase.replace("ﻻ" , "b")
+
+            return phrase;
+
+        else: return "please input Arabic or English keyboard letters"
+
+    def getString(self):
+
+        try:
+            shit = raw_input("> ")
+            return shit;
+        except EOFError:
+            print "\n"
+            exit()
+
+    def mainLoop(self):
+        
+        while True:
+            print self.convert(self.getString());
 
 
-
+if __name__ == '__main__':
+        Converto().showIntro();
+        Converto().mainLoop();
