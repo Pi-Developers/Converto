@@ -50,7 +50,7 @@ So, we created this simple app "CONVERTO"
 >> - Converted to GTK
 >> - Cleaner layout
 >> - Log function in Java GUI
->> - Fixed Bug in in Java Console version
+>> - Fixed Bug in Java Console version
 
 **Notes :**
 
