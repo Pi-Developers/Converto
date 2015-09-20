@@ -22,7 +22,19 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+/**
+ * <p>How this Works</p>
+ * 
+ * Well We use Swing to make Window then we add edittext where people
+ * can add input of the text then we add 2 radio button where user can select
+ * his choice then we add two two button copy and paste this button help user
+ * to copy and to paste the texts that you have been converted then we add
+ * Change It button when you click on it it automatically take the input from
+ * the edittext and check which radio button inuse accodring to the radio button
+ * we fix the text and change into helpane
+ * 
+ *
+ **/
 public class ConvertoGUI {
     public static  String INPUT = null;
     public static String EnglishPattle = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPRSTUVWXYZ[]'/;.,";
