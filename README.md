@@ -3,7 +3,7 @@ An app for confused arabic users
 
 If you are not using arabic/english at the same time this is not for you.
 
-                   ![alt tag](https://pbs.twimg.com/media/CSh-XhDXAAArCeG.png)
+  ![alt tag](https://pbs.twimg.com/media/CSh-XhDXAAArCeG.png)
 
 
 **Current version : 1.1** 
