@@ -22,7 +22,7 @@ So, we created this simple app "CONVERTO"
 - Convert english to arabic
 - Written in java
 - Written in python
-- Written in Vb.NET
+- Written in C# .NET
 - Directly fix text (Windows only)
 
 **To-Do list :**
